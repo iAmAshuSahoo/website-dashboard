@@ -41,6 +41,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
     needs: [build, test]
     permissions:
       actions: read
